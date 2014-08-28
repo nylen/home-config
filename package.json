@@ -1,0 +1,32 @@
+{
+    "name"        : "home-config",
+    "author"      : "James Nylen <jnylen@gmail.com>",
+    "description" : "Simple library for managing a config file in a user's home dir.",
+    "version"     : "0.0.1",
+    "repository"  : {
+        "type" : "git",
+        "url"  : "https://github.com/nylen/home-config"
+    },
+    "bugs" : {
+        "url" : "https://github.com/nylen/home-config/issues"
+    },
+    "license"  : "MIT",
+    "keywords" : [
+        "home",
+        "config",
+        "application",
+        "settings"
+    ],
+    "main"    : "./index.js",
+    "scripts" : {
+        "test" : "node node_modules/.bin/mocha"
+    },
+    "devDependencies" : {
+        "mocha"  : "~1.21.4",
+        "should" : "~4.0.4",
+        "temp"   : "~0.8.1"
+    },
+    "dependencies" : {
+        "ini" : "~1.2.1"
+    }
+}
