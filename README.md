@@ -15,8 +15,8 @@ Configuration files are stored in ini format as parsed by
 
 ## Usage
 
-Basic usage is to require the module and call `.load()` with your desired config filename
-returned by `require('request')`:
+Basic usage is to require the module and call `.load()` with your desired
+config filename:
 
 ```js
 var cfg = require('home-config').load('.myapprc');
@@ -28,7 +28,8 @@ var cfg = require('home-config').load('.myapprc', {
 });
 ```
 
-If desired, you can make changes then save your config file:
+You can make changes then save your config file (but any user comments or
+indentation will be removed):
 
 ```js
 cfg.section = {
