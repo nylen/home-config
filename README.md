@@ -1,4 +1,4 @@
-# home-config [![Build Status](https://travis-ci.org/nylen/home-config.png?branch=master)](https://travis-ci.org/nylen/home-config)
+# home-config [![Build status](http://img.shields.io/travis/nylen/home-config.svg?style=flat)](https://travis-ci.org/nylen/home-config) [![npm package](http://img.shields.io/npm/v/home-config.svg?style=flat)](https://www.npmjs.org/package/home-config)
 
 This Node.js module provides an easy way to read and write configuration files in
 a user's home directory, where many Linux applications store configuration
