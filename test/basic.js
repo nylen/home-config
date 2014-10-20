@@ -78,4 +78,33 @@ describe('HomeConfig', function() {
             }
         });
     });
+
+    it('should not load or save prohibited names', function() {
+        var prohibited = Object.keys(HomeConfig.prototype);
+
+        prohibited.sort()
+        prohibited.should.eql([
+            '__filename',
+            'getAll',
+            'save'
+        ]);
+
+        fs.writeFileSync(fn, prohibited.map(function(k) {
+            return k + ' = test';
+        }).join('\n'));
+
+        cfg = HomeConfig.load(fn);
+
+        prohibited.forEach(function(k) {
+            if (k == '__filename') {
+                cfg[k].should.equal(fn);
+            } else {
+                (typeof cfg[k]).should.equal('function', 'typeof cfg.' + k);
+            }
+        });
+
+        cfg.save();
+
+        fs.readFileSync(fn, 'utf8').should.equal('');
+    });
 });

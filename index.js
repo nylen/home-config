@@ -15,7 +15,7 @@ function HomeConfig(filename, defaultData) {
     }
 
     for (var k in data) {
-        if (k != 'save') {
+        if (!(k in HomeConfig.prototype)) {
             self[k] = data[k];
         }
     }

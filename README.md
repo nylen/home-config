@@ -43,8 +43,14 @@ cfg.save();
 cfg.save('some-other-filename');
 ```
 
-Also, this package is designed to work with config files in the current user's
-home directory, but all filenames are passed to
+The following top-level config key names are prohibited and will not be saved
+or loaded:
+- `save`
+- `getAll`
+- `__filename`
+
+Finally, this package is designed to work with config files in the current
+user's home directory, but all filenames are passed to
 [`path.resolve`](http://nodejs.org/api/path.html#path_path_resolve_from_to), so
 if you pass an absolute path to `.load()` or `.save()` then it will be used
 as-is.
